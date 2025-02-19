@@ -34,12 +34,12 @@ function App() {
   // })
 
 
-  const [data, setData] = useState([])
+  // const [data, setData] = useState([])
 
   //useEffect with API
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/products').then((response) => response.json()).then((json) => setData(json))
-  }, [])
+  // useEffect(() => {
+  //   fetch('https://fakestoreapi.com/products').then((response) => response.json()).then((json) => setData(json))
+  // }, [setData])
 
 
   return (
@@ -56,25 +56,28 @@ function App() {
       </div> */}
 
 
-      <div style={{ justifyContent: 'center' }}>
+      {/* useEffect */}
+      {/* <div style={{ justifyContent: 'center' }}>
         <h1>PRODUCTS</h1>
         <ul>
           {data.map((item) => {
             return (
               <>
+              <div value={item.id}>
                 <li>{item.title}</li>
                 <li>{item.price}</li>
                 <li>{item.category}</li>
                 <li>{item.rating[1]}</li>
-
+                </div>
               </>
             )
           })}
         </ul>
+      </div> */}
 
 
 
-      </div>
+
 
     </>
   );
