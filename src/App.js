@@ -6,49 +6,50 @@ function App() {
 
   // useState Hook
   // const [count, setCount] = useState(0);
-
+  
   // const addNumber = () => {
-  //   setCount(prev => prev + 2)
-  // }
+  //     setCount(prev => prev + 2)
+  //   }
+    
+  //   const subNumber = () => {
+  //       setCount(prev => prev - 1)
+  //     }
+      
+      // const [name, setName] = useState('Hasnain');
+      
+      // const nameChange = () =>{
+        //   setName('Hasnain Ali')
+        
+        // }
+        
+        
+        // // useEffect with dependancy
+        // useEffect(()=>{
+          //   console.log('useEffect Hook is running');
+          // }, [])
 
-  // const subNumber = () => {
-  //   setCount(prev => prev - 1)
-  // }
-
-  // const [name, setName] = useState('Hasnain');
-
-  // const nameChange = () =>{
-  //   setName('Hasnain Ali')
-
-  // }
-
-
-  // // useEffect with dependancy
-  // useEffect(()=>{
-  //   console.log('useEffect Hook is running');
-  // }, [])
-
-  // // useEffect without dependancy
-  // useEffect(()=>{
+          // // useEffect without dependancy
+          // useEffect(()=>{
   //   console.log('useEffect Hook is running');
   // })
-
-
+  
+  
   // const [data, setData] = useState([])
-
+  
   //useEffect with API
   // useEffect(() => {
-  //   fetch('https://fakestoreapi.com/products').then((response) => response.json()).then((json) => setData(json))
-  // }, [setData])
-
-
-  return (
-    <>
-      {/* <div>
-        <h1>{count}</h1>
-        <button onClick={addNumber}>Click me to increase the number</button>
-        <button onClick={subNumber}>Click me to increase the number</button>
-      </div> */}
+    //   fetch('https://fakestoreapi.com/products').then((response) => response.json()).then((json) => setData(json))
+    // }, [setData])
+    
+    const [count, setCount] = useState(0)
+    
+    return (
+      <>
+      <div>
+        <h1>Count: {count}</h1>
+        <button onClick={()=> setCount(count + 1)}>Click me to increase the number</button>
+        <button onClick={()=> setCount(count -1)}>Click me to increase the number</button>
+      </div>
       {/* 
       <div>
         <h1>Enter your name</h1>
